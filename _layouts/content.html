@@ -1,0 +1,32 @@
+---
+---
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body class="dark">
+<div class="container">
+    {% include header.html %}
+    <div class="grid">
+        <div class="content cell -12of12">
+            <section class="main">
+                <h1>~{{ page.url }}</h1>
+                {%- unless page.simple -%}
+                <div class="meta">
+                    <div class="date">{{ page.date }}</div>&bull;
+                    <div class="author">by {{ page.author }}</div>
+                    <hr />
+                </div>
+                {%- endunless -%}
+                <div>
+                    {{content}}
+                </div>
+            </section>
+            {% include return-to-kb.html %}
+        </div>
+    </div>
+    <div class="grid">
+        {% include footer.html %}
+    </div>
+</div>
+</body>
+</html>

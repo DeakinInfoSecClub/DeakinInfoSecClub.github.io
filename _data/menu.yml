@@ -1,0 +1,40 @@
+# main menu
+- label: home
+  type: main
+  index_path: /kb/
+- label: articles
+  type: main
+  index_path: /kb/articles
+- label: cheatsheets
+  type: main
+  index_path: /kb/cheatsheets
+- label: sessions
+  type: main
+  index_path: /sessions/
+# - label: workshops
+#   type: main
+#   index_path: /kb/workshops
+
+# sub menu
+- label: the team
+  type: sub
+  index_path: /about#the-team
+- label: calendar
+  type: sub
+  index_path: /calendar
+- label: contributing
+  type: sub
+  index_path: /kb/contributing
+
+- label: facebook
+  type: social
+  url: https://facebook.com/groups/DeakinInfoSecClub
+- label: slack
+  type: social
+  url: https://discclub.slack.com/join/signup
+- label: linkedin
+  type: social
+  url: https://www.linkedin.com/company/deakin-information-security-club/
+- label: youtube
+  type: social
+  url: https://www.youtube.com/channel/UCilvmmP4dkWJzlxvvTABGNw

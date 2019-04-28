@@ -1,0 +1,91 @@
+
+title: Deakin Infomation Security Club
+email: deakininfosec@gmail.com
+repository: DeakinInfoSecClub/DeakinInfoSecClub.github.io
+description: >
+    A university club for hackers, problem solvers and IT security professionals.
+baseurl: ""
+url: https://deakininfosec.com.au
+timezone: Australia/Melbourne
+
+social:
+    facebook: https://facebook.com/groups/DeakinInfoSecClub
+    slack: https://discclub.slack.com/join/signup
+    linkedin: https://www.linkedin.com/company/deakin-information-security-club/
+    youtube: https://www.youtube.com/channel/UCilvmmP4dkWJzlxvvTABGNw
+
+plugins:
+    - jekyll-feed
+    - jekyll-seo-tag
+    - jekyll-redirect-from
+    - jekyll-github-metadata
+    - jemoji
+
+markdown: kramdown
+
+highlighter: rouge
+
+feed:
+    path: atom.xml
+    collections:
+        - articles
+        - cheatsheets
+        - sessions
+
+kramdown:
+    input: GFM
+
+sass:
+    style: compressed
+
+include: ["_pages", "_shortlinks"]
+exclude: ["run.sh"]
+
+collections_dir: content
+collections:
+    articles:
+        output: true
+        index_path: /kb/articles/
+        permalink: /kb/:collection/:title
+    cheatsheets:
+        output: true
+        index_path: /kb/cheatsheets/
+        permalink: /kb/:collection/:title
+    sessions:
+        output: true
+        index_path: /sessions/
+        permalink: /:collection/:title
+    workshops:
+        output: true
+        index_path: /kb/workshops/
+        permalink: /kb/:collection/:title
+
+defaults:
+    -
+        scope:
+            path: "_articles"
+        values:
+            layout: "content"
+            type: "article"
+            author: "anon"
+    -
+        scope:
+            path: "_cheatsheets"
+        values:
+            layout: "content"
+            type: "cheatsheet"
+            author: "anon"
+    -
+        scope:
+            path: "_sessions"
+        values:
+            layout: "content"
+            type: "session"
+            author: "The DISC Team"
+    -
+        scope:
+            path: "_workshops"
+        values:
+            layout: "content"
+            type: "workshop"
+            author: "anon"
