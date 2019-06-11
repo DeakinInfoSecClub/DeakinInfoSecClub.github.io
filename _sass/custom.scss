@@ -21,7 +21,7 @@ header {
     margin: 1.5rem 0 2rem;
 
     @media not #{$query-smaller} {
-        margin: 1.5rem 0 0;
+        margin: 1.5rem 0 1rem;
     }
 
     * {
@@ -39,6 +39,7 @@ header {
         display: inline-block;
         font-size: 32px;
         font-weight: 400;
+        line-height: 0;
         font-family: $font-headings;
     }
 }
@@ -72,13 +73,80 @@ header {
 
     .content {
         overflow: auto;
+        max-width: 100%;
         @media not #{$query-smaller} {
             margin-top: 3rem;
         }
 
         .listing {
-            .author {
-                font-size: 11px;
+            list-style-type: none;
+            padding-left: 0;
+
+            li {
+                margin-left: 0;
+                padding: 20px 0;
+
+                &:first-of-type {
+                    padding-top: 0px;
+                }
+
+                &:last-of-type {
+                    padding-bottom: 0px;
+                }
+
+                a.title {
+                    font-family: $font-headings;
+                    line-height: 1;
+                }
+
+                a.author-link {
+                    color: inherit;
+
+                    &:hover {
+                        color: black;
+                    }
+                }
+            }
+
+            .meta {
+                margin-top: 0.05rem;
+                font-size: 0.8rem;
+
+                .tags {
+                    display: inline-block;
+
+                    .tag {
+                        background: black;
+                        color: $color-subtle;
+                        padding: 0.1em 0.3em;
+                        margin-right: 0.25em;
+                        &::before {
+                            content: '#';
+                            display: inline;
+                        }
+
+                        &[data-tag*="beginner"] {
+                            background: #1b8759;
+                            color: white;
+                        }
+
+                        &[data-tag*="intermediate"] {
+                            background: #eae723;
+                            color: #000000;
+                        }
+
+                        &[data-tag*="experienced"] {
+                            background: #ea2344;
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+
+            .excerpt {
+                margin-top: 0.25rem;
+                color: $color-subtle;
+                font-size: 0.75rem;
             }
         }
 
@@ -94,12 +162,39 @@ header {
             }
         }
 
+        hr {
+            border: 0;
+            border-top: 4px solid $color-subtle;
+            display: block;
+            width: 33%;
+            margin: 5em auto;
+        }
+
         h1, h2, h3, h4, h5, h6 {
             font-family: $font-headings;
+            margin-top: 2.5em;
         }
 
         p, li, ol, ul, blockquote {
             font-family: $font-body;
+        }
+
+        ol {
+            list-style-type: decimal-leading-zero;
+        }
+
+        .emoji {
+            height: 1em;
+            width: 1em;
+            vertical-align: sub;
+            line-height: 1px;
+        }
+
+        blockquote {
+            border-left: 4px solid darken($color-subtle, 15%);
+            padding-left: 20px;
+            margin-left: 0.25rem;
+            line-height: 1.5;
         }
 
         pre {
@@ -107,6 +202,57 @@ header {
             max-width: 100%;
             padding: .5rem .75rem;
             border: 1px solid $color-pink;
+        }
+
+        code.highlighter-rouge {
+            background: fade-out($color-subtle, 0.65);
+            border-radius: 3px;
+            padding: 1px 3px;
+        }
+
+        table thead th {
+            font-size: 1rem;
+            background-color: #111;
+        }
+
+        a {
+            code.highlighter-rouge {
+                background: transparent;
+                padding: 0;
+            }
+        }
+
+        div.highlighter-rouge[class*='language-']{
+            position: relative;
+            max-width: 100%;
+
+            &::before {
+                position: absolute;
+                top: 0; right: 0;
+                border: 1px solid $color-pink;
+                font-size: 0.85rem;
+                z-index: 100;
+                color: white;
+                background-color: fade-out(black, 0.1);
+                padding: 2px 8px;
+            }
+        }
+
+        div.highlighter-rouge[class*='language-python']::before {
+            content: "python";
+        }
+        div.highlighter-rouge[class*='language-ruby']::before {
+            content: "ruby";
+        }
+        div.highlighter-rouge[class*='language-bash']::before {
+            content: "bash";
+        }
+        div.highlighter-rouge[class*='language-sh']::before {
+            content: "sh";
+        }
+        div.highlighter-rouge[class*='language-js']::before,
+        div.highlighter-rouge[class*='language-javascript']::before {
+            content: "js";
         }
 
         img, iframe {
@@ -131,6 +277,40 @@ header {
                     display: block;
                     text-align: left;
                 }
+
+                .tags {
+                    display: inline-block;
+
+                    .tag {
+                        background: black;
+                        color: $color-subtle;
+                        padding: 0.1em 0.3em;
+                        margin-right: 0.25em;
+                        overflow-wrap: break-word;
+                        word-wrap: break-word;
+                        hyphens: auto;
+
+                        &::before {
+                            content: '#';
+                            display: inline;
+                        }
+
+                        &[data-tag*="beginner"] {
+                            background: #1b8759;
+                            color: white;
+                        }
+
+                        &[data-tag*="intermediate"] {
+                            background: #eae723;
+                            color: #000000;
+                        }
+
+                        &[data-tag*="experienced"] {
+                            background: #ea2344;
+                            color: #ffffff;
+                        }
+                    }
+                }
             }
 
             .exec {
@@ -149,6 +329,28 @@ header {
                     width: 100%;
                 }
 
+            }
+
+        }
+
+        iframe {
+            max-width: 100%;
+
+            &[src*='youtube.com'] {
+                margin: 1rem 0;
+                width: 100%;
+                height: 611px;
+                background-color: black;
+            }
+        }
+
+        h4 {
+            &.alpha, &.year {
+                font-size: 1.75rem;
+                line-height: 1;
+                margin-top: 2rem;
+                margin-bottom: 0.5rem;
+                position: relative;
             }
         }
     }
@@ -190,5 +392,20 @@ a.wrap {
     &:hover {
         background-color: transparent;
         color: white;
+    }
+
+    &.minimal-backlink {
+        color: black;
+        font-size: 1em;
+        vertical-align: top;
+        background-color: #74ee15;
+        width: 2rem;
+        display: inline-block;
+        text-align: left;
+        padding: 0 0.25em;
+
+        &:hover {
+            color: white;
+        }
     }
 }

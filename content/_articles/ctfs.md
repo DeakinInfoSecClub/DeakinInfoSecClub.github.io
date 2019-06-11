@@ -1,20 +1,28 @@
 ---
 title: CTFs
-author: multiple
+author: ketz
+tags:
+    - self-development
+    - ctfs
+published: true
 ---
 
 ## What is a CTF?
 
-Paraphrased from [CTFtime.org](https://ctftime.org/ctf-wtf/):
+A CTF _(Capture the Flag)_ event is a type of hacking competition that challenges technical knowledge and outside of the box thinking. There are two main types of CTF challenge: **jeopardy** and **attack / defend**.
 
-> Capture the Flag (CTF) is a special kind of information security competition. There are three common types of CTFs: Jeopardy, Attack-Defence and mixed.
+Jeopardy CTFs are the most common style and are probably the best place to start out. Challenges are grouped by category, with points being assigned to each challenge according to difficulty.
 
-> Jeopardy-style CTFs has a couple of questions (tasks) in range of categories. For example, Web, Forensic, Crypto, Binary or something else (misc). Teams can gain points for every solved task. More points are awarded for more complicated tasks. Sometimes the next task in a chain can be opened only after the team solves the previous task in the sequence. When the game time is over, the winner is determined by the number of points they have gained.
-
-> Well, attack-defence is another interesting kind of competitions. Here every team has own network(or only one host) with vulnarable services. Your team has time for patching your services and developing exploits usually. So, then organizers connects participants of competition and the wargame starts! You should protect own services for defence points and hack opponents for attack points. Historically this is a first type of CTFs, everybody knows about DEF CON CTF - something like a World Cup of all other competitions.
-
-> Mixed competitions may vary possible formats. It may be something like wargame with special time for task-based elements (e.g. UCSB iCTF).
-
-> CTF games often touch on many other aspects of information security: cryptography, stego, binary analysis, reverse engeneering, mobile security and others. Good teams generally have strong skills and experience in all these issues.
+The idea is to collect tokens _(flags)_ as proof of having solved various tasks. CTFs are targeted at a range of skill levels, many of the popular ones are designed for high-school students.
 
 ## Categories
+
+#### Web
+
+#### Forensics
+
+#### Crypto
+
+#### Binary
+
+#### Misc

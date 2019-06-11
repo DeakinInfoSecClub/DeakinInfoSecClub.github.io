@@ -1,7 +1,10 @@
 ---
-title: "#!/bin/bash => a crash course on bash"
-author: "@ketz"
+title: bash => crash course commands
+author: "ketz"
+description: "A list of useful bash commands and some tips and tricks to help you become more efficient using the bash shell."
 ---
+
+> _The below content was included as part of the 0x02 session: `#!/bin/bash => a crash course in bash`._
 
 # Useful commands
 
@@ -17,13 +20,13 @@ You'll never be able to memorise every single command for everything, but these 
 | `touch` | `files` | **modify timestamps**, techincally this is the intention of the command, but it also is useful just for creating empty files (e.g: `touch blah` creates a file called `blah`). |
 | `apt` | `software` `updates` | [**advanced package tool**](https://manpages.ubuntu.com/manpages/xenial/en/man8/apt.8.html), used to keep the system up to date. There are many subcommands for this tool. `apt update`, `apt upgrade`, `apt install` are a few handy ones. |
 
-and [`many`](https://www.tecmint.com/51-useful-lesser-known-commands-for-linux-users/), [`many`](https://fossbytes.com/a-z-list-linux-command-line-reference/), [`more...`](https://www.howtoforge.com/linux-commands/)
+and [many](https://www.tecmint.com/51-useful-lesser-known-commands-for-linux-users/), [many](https://fossbytes.com/a-z-list-linux-command-line-reference/), [more...](https://www.howtoforge.com/linux-commands/)
 
 <br/><br/>
 
 ### Resources
 
-_If you are interested in finding out more or doing your own research, here are some potential starting points, none of these are mandatory reading and going through all of them in detail is definitely overkill._
+_If you are interested in finding out more or doing your own research, here are some potential starting points. None of these are mandatory reading and going through all of them in detail is definitely overkill._
 
 | resource | description |
 |:--|:--|

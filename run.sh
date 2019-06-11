@@ -36,7 +36,7 @@ if [ $exit_code == 0 ]; then # if everything is fine up until now...
     fi
 
     if [ $(bundle exec jekyll b &> /dev/null; echo $?) == 0 ]; then # if it is possible to build the site once using jekyll, start a dev server.
-        echo -e "[i] Everything installed, starting a jekyll dev server...";
+        echo -e "[i] Everything is (probably) installed, starting a jekyll dev server...";
         bundle exec jekyll s; # run the dev server.
     else
         echo -e "[!] There may be errors, check that all the ruby gem dependencies have installed properly."; # something went wrong, send help.

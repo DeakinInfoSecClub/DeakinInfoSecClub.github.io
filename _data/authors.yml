@@ -1,0 +1,13 @@
+# INDENTATION MATTERS HERE, match the existing content pls
+#
+# <username>:
+#   url: <insert URL where you want your author tag to link to>
+
+T0py:
+  url: https://twitter.com/infosecfriends
+Viren Khatri:
+  url: https://twitter.com/vireniumk
+Nigel Hedges:
+  url: https://twitter.com/nigelhedges
+ketz:
+  url: https://twitter.com/0ketz

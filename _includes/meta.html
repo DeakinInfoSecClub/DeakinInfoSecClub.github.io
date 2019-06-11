@@ -6,5 +6,4 @@
     {% if page.url %}<meta content="{{ site.url }}{{ page.url }}" property="og:url">{% endif %}
     {% if page.date %}<meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
     <meta content="{{ site.url }}/about/" property="article:author">{% endif %}
-    {% if page.categories %}{% for category in page.categories limit:1 %}<meta content="{{ category }}" property="article:section">{% endfor %}{% endif %}{% if page.tags %}{% for tag in page.tags %}<meta content="{{ tag }}" property="article:tag">{% endfor %}{% endif %}
-    {% feed_meta %}
+    {% if page.categories %}{% for category in page.categories limit:1 %}<meta content="{{ category }}" property="article:section">{% endfor %}{% endif %}{% if page.tags %}{% for tag in page.tags %}<meta content="{{ tag }}" property="article:tag">{% endfor %}{% endif %}{%- feed_meta -%}

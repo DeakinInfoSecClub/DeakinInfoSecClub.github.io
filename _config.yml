@@ -1,3 +1,4 @@
+# _config.yml
 
 title: Deakin Infomation Security Club
 email: deakininfosec@gmail.com
@@ -10,15 +11,20 @@ timezone: Australia/Melbourne
 
 social:
     facebook: https://facebook.com/groups/DeakinInfoSecClub
-    slack: https://discclub.slack.com/join/signup
+    slack: https://discclub.slack.com/
     linkedin: https://www.linkedin.com/company/deakin-information-security-club/
     youtube: https://www.youtube.com/channel/UCilvmmP4dkWJzlxvvTABGNw
 
+calendar:
+    embed: https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Australia%2FMelbourne&amp;src=ZjllYnZxaTdrcWp0dDA4dTVoczM5YXFmazhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%234285F4&amp;showPrint=0&amp;showTabs=1&amp;showCalendars=0&amp;showTz=0&amp;showDate=0&amp;showTitle=0
+    subscribe: https://calendar.google.com/calendar/ical/f9ebvqi7kqjtt08u5hs39aqfk8%40group.calendar.google.com/public/basic.ics
+
 plugins:
     - jekyll-feed
-    - jekyll-seo-tag
-    - jekyll-redirect-from
     - jekyll-github-metadata
+    - jekyll-redirect-from
+    - jekyll-seo-tag
+    - jekyll-sitemap
     - jemoji
 
 markdown: kramdown
@@ -31,6 +37,7 @@ feed:
         - articles
         - cheatsheets
         - sessions
+        - workshops
 
 kramdown:
     input: GFM

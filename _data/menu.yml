@@ -11,14 +11,14 @@
 - label: sessions
   type: main
   index_path: /sessions/
-# - label: workshops
-#   type: main
-#   index_path: /kb/workshops
+- label: workshops
+  type: main
+  index_path: /kb/workshops
 
 # sub menu
-- label: the team
-  type: sub
-  index_path: /about#the-team
+# - label: the team
+#   type: sub
+#   index_path: /about#the-team
 - label: calendar
   type: sub
   index_path: /calendar
@@ -31,7 +31,7 @@
   url: https://facebook.com/groups/DeakinInfoSecClub
 - label: slack
   type: social
-  url: https://discclub.slack.com/join/signup
+  url: https://discclub.slack.com/
 - label: linkedin
   type: social
   url: https://www.linkedin.com/company/deakin-information-security-club/
