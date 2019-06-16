@@ -1,19 +1,22 @@
+---
+---
 <!DOCTYPE html>
 <html>
 <head>
   <title>DISC – Deakin Infomation Security Club</title>
-  <meta name="viewport" content="width=640;initial-scale=1;" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.2, user-scalable=0;" />
   <meta charset="UTF-8">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/icons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/icons/favicon-16x16.png">
-  <link rel="manifest" href="/static/img/icons/site.webmanifest">
-  <link rel="mask-icon" href="/static/img/icons/safari-pinned-tab.svg" color="#000033">
-  <link rel="shortcut icon" href="/static/img/icons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{site.url}}/static/img/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{site.url}}/static/img/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{site.url}}/static/img/icons/favicon-16x16.png">
+  <link rel="manifest" href="{{site.url}}/static/img/icons/site.webmanifest">
+  <link rel="mask-icon" href="{{site.url}}/static/img/icons/safari-pinned-tab.svg" color="#000033">
+  <link rel="shortcut icon" href="{{site.url}}/static/img/icons/favicon.ico">
   <meta name="msapplication-TileColor" content="#2b5797">
-  <meta name="msapplication-config" content="/static/img/icons/browserconfig.xml">
+  <meta name="msapplication-config" content="{{site.url}}/static/img/icons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="A university club for hackers, problem solvers and IT security professionals. Based at Deakin University in Burwood, Victoria.">
   <style>
     /* http://meyerweb.com/eric/tools/css/reset/
     v2.0 | 20110126
@@ -74,15 +77,38 @@
       font-size: 16px;
     }
 
+    @media screen and (max-width: 768px) {
+        section pre {
+            font-size: 8px
+        }
+
+        header .banner {
+            font-size: 7px !important;
+        }
+
+        .tagline, .links, footer {
+            font-size: 8px;
+        }
+
+        pre.attention {
+            font-size: 8px;
+            margin: 0 auto 1.5rem;
+        }
+    }
+
     body {
       color: #DDDDDD;
+      position: relative;
       /* color: #c5c8c6; */
       /*background-color: #0d0d18;*/
-      background-color: black;
+      background-color: #0c0c0c;
+      max-width: 100%;
+      font-family: "TopazPlus", "Fira Code", "Menlo", "Lucida Console", monospace, Monaco;
+      background-image: url('/static/img/pattern.svg');
     }
 
     pre {
-      font-family: "TopazPlus", "Profont for Powerline", "Lucida Console", monospace, Monaco;
+      font-family: "TopazPlus", "Fira Code", "Menlo", "Lucida Console", monospace, Monaco;
     }
 
     a {
@@ -135,13 +161,21 @@
       color: #93ff4c;
     }
 
+    .container {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+
     header {
       margin: 0 auto;
       display: flex;
-      min-width: 640px;
-      justify-content: center;
       flex-direction: column;
-      align-items: center;
+      justify-content: stretch;
+      align-items: stretch;
     }
 
     .attention {
@@ -151,11 +185,19 @@
     .links {
       position: relative;
       display: block;
-      margin: 0 auto;
+      text-align: center;
     }
 
     .links a {
       display: inline-block;
+      margin: 0 auto;
+    }
+
+    .links span {
+      width: 100%;
+      display: inline-block;
+      margin: 0 auto;
+      text-align: center;
     }
 
     .cent {
@@ -178,6 +220,12 @@
       margin-bottom: 3rem;
     }
 
+    .ascii-art {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+    }
+
     footer {
       margin: 3em 0;
       color: rgba(255,255,255,0.15);
@@ -187,12 +235,14 @@
 </head>
 
 <body class="hack dark">
+  <div class="container">
 <header>
 <pre class="ik attention"><center>
 -------------------------------------------------------------------------------
 DEAKIN INFORMATION SECURITY CLUB | WEDNESDAYS 6PM @ BURWOOD CAMPUS
 -------------------------------------------------------------------------------
 </center></pre>
+<div class="ascii-art">
 <pre class="banner pink" style="display: block; margin: 0 auto; width: 54ch;">
 @@@@@@@   @@@@@@@@   @@@@@@   @@@  @@@  @@@  @@@  @@@
 @@@@@@@@  @@@@@@@@  @@@@@@@@  @@@  @@@  @@@  @@@@ @@@
@@ -202,7 +252,7 @@ DEAKIN INFORMATION SECURITY CLUB | WEDNESDAYS 6PM @ BURWOOD CAMPUS
 !@!  !!!  !!!!!:    !!!@!!!!  !!@!!!    !!!  !@!  !!!
 !!:  !!!  !!:       !!:  !!!  !!: :!!   !!:  !!:  !!!
 :!:  !:!  :!:       :!:  !:!  :!:  !:!  :!:  :!:  !:!
-  :::: ::   :: ::::  ::   :::   ::  :::   ::   ::   ::
+ :::: ::   :: ::::  ::   :::   ::  :::   ::   ::   ::
 :: :  :   : :: ::    :   : :   :   :::  :    ::    :
 
 </pre>
@@ -216,13 +266,13 @@ DEAKIN INFORMATION SECURITY CLUB | WEDNESDAYS 6PM @ BURWOOD CAMPUS
 !!!  !@!  !!!  !!!!!:    !@!  !!!   !!@!!!   !!!!!:    !!!
 !!:  !!:  !!!  !!:       !!:  !!!       !:!  !!:       :!!
 :!:  :!:  !:!  :!:       :!:  !:!      !:!   :!:       :!:
-  ::   ::   ::   ::       ::::: ::  :::: ::    :: ::::   ::: :::
+ ::   ::   ::   ::       ::::: ::  :::: ::    :: ::::   ::: :::
 :    ::    :    :         : :  :   :: : :    : :: ::    :: :: :
 
 </pre>
 
-<pre class="banner pink" style="display: inline-block; margin: 0 auto; width: 39ch;">
-  @@@@@@@  @@@       @@@  @@@  @@@@@@@
+<pre class="banner pink" style="display: block; margin: 0 auto; width: 39ch;">
+ @@@@@@@  @@@       @@@  @@@  @@@@@@@
 @@@@@@@@  @@@       @@@  @@@  @@@@@@@@
 !@@       @@!       @@!  @@@  @@!  @@@
 !@!       !@!       !@!  @!@  !@   @!@
@@ -230,23 +280,24 @@ DEAKIN INFORMATION SECURITY CLUB | WEDNESDAYS 6PM @ BURWOOD CAMPUS
 !!!       !!!       !@!  !!!  !!!@!!!!
 :!!       !!:       !!:  !!!  !!:  !!!
 :!:        :!:      :!:  !:!  :!:  !:!
-  ::: :::   :: ::::  ::::: ::   :: ::::
+ ::: :::   :: ::::  ::::: ::   :: ::::
   :: :: :  : :: : :   : :  :   :: : ::
 
 </pre>
-
+</div>
 </header>
-<pre><center>
+<pre class="tagline"><center>
 
 A university club for hackers, problem solvers and IT security professionals.
 </center></pre>
 
 <section>
-<pre class="purp links"><center>
---------------------------------------------------------------------------------
-| <a href="https://www.facebook.com/groups/DeakinInfoSecClub/">FACEBOOK</a> | <a href="https://discclub.slack.com/join/signup">SLACK</a> | <a href="mailto:deakininfosec@gmail.com">EMAIL</a> | <a href="https://github.com/DeakinInfoSecClub">GITHUB</a> | <a href="https://www.youtube.com/channel/UCilvmmP4dkWJzlxvvTABGNw">YOUTUBE</a> | <a href="https://dusa.org.au/club/deakin-information-security-club-disc/">SIGN UP</a> |
---------------------------------------------------------------------------------
-</center></pre>
+<div class="purp links"><center>
+<br/>
+<pre>--------------------------------------------------------------------------------</pre>
+<span>| <a href="https://www.facebook.com/groups/DeakinInfoSecClub/">FACEBOOK</a> | <a href="https://discclub.slack.com/join/signup">SLACK</a> | <a href="mailto:deakininfosec@gmail.com">EMAIL</a> | <a href="https://github.com/DeakinInfoSecClub">GITHUB</a> | <a href="https://www.youtube.com/channel/UCilvmmP4dkWJzlxvvTABGNw">YOUTUBE</a> | <a href="https://dusa.org.au/club/deakin-information-security-club-disc/">SIGN UP</a> |</span>
+<pre>--------------------------------------------------------------------------------</pre>
+</center></div>
  <!--<a href="/archive.html">ARCHIVE</a> -->
  <!-- may need a section for video links in the future. -->
 
@@ -305,18 +356,17 @@ A university club for hackers, problem solvers and IT security professionals.
 </center></pre>
 
 <center>
-      <!-- Calendar -->
-      <section id="calendar">
-        <div class="container" style="filter: invert(100%) hue-rotate(40deg) saturate(100%);">
-          <div class="row justify-content-md-center">
-            <div class="col-lg-12 text-center tcc">
-              <iframe src="https://calendar.google.com/calendar/embed?src=fml0x90%40gmail.com&ctz=Australia%2FMelbourne"
-                style="border: 0; max-width: 800px; width: 640px;" width="640" height="600" frameborder="0" scrolling="no"></iframe>
-            </div>
+    <!-- Calendar -->
+    <section id="calendar">
+      <div class="container" style="filter: invert(100%) hue-rotate(40deg) saturate(100%);">
+        <div class="row justify-content-md-center">
+          <div class="col-lg-12 text-center tcc">
+            <iframe src="{{ site.calendar.embed }}"
+              style="border: 0; max-width: 100%; width: 640px;" width="640" height="600" frameborder="0" scrolling="no"></iframe>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </center>
 </section>
 
@@ -326,7 +376,9 @@ DISC is run by students for students and is a non-profit making organisation.
 </center></pre>
 </footer>
 
-
+</div>
 </body>
+
+<!-- Did you enjoy that? Maybe take a look at our knowledge base too: {{site.url}}/kb/ -->
 
 </html>
