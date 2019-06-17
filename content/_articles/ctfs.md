@@ -5,6 +5,7 @@ tags:
     - self-development
     - ctfs
 published: true
+date: 2019-06-10
 ---
 
 ## What is a CTF?
