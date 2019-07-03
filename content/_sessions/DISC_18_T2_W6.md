@@ -1,7 +1,8 @@
 ---
 title: "DISC_18_Tri2_Week6: Life of a Pentester"
 date: 2018-08-15T18:00
-author: T0py
+author:
+    - T0py
 published: true
 ---
 

@@ -58,6 +58,10 @@ collections:
         output: true
         index_path: /kb/cheatsheets/
         permalink: /kb/:collection/:title
+    profiles:
+        output: true
+        index_path: /kb/profiles/
+        permalink: /kb/:collection/:title
     sessions:
         output: true
         index_path: /sessions/
@@ -82,6 +86,12 @@ defaults:
             layout: "content"
             type: "cheatsheet"
             author: "anon"
+    -
+        scope:
+            path: "_profiles"
+        values:
+            layout: "profile"
+            type: "profile"
     -
         scope:
             path: "_sessions"

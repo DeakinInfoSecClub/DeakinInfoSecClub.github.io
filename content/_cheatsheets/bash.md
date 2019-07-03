@@ -2,6 +2,10 @@
 title: bash => crash course commands
 author: "ketz"
 description: "A list of useful bash commands and some tips and tricks to help you become more efficient using the bash shell."
+tags:
+    - bash
+    - shells
+    - cli
 ---
 
 > _The below content was included as part of the 0x02 session: `#!/bin/bash => a crash course in bash`._

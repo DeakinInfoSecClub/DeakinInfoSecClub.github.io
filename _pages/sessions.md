@@ -2,6 +2,7 @@
 layout: indexer
 permalink: /sessions/
 iterator: sessions
+redirect_from: /kb/sessions/
 show_years: true
 sort_condition: "date"
 ---

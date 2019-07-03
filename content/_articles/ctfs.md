@@ -1,6 +1,7 @@
 ---
 title: CTFs
-author: ketz
+author:
+    - ketz
 tags:
     - self-development
     - ctfs
