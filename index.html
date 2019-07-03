@@ -231,6 +231,52 @@
       color: rgba(255,255,255,0.15);
     }
 
+    #kb-link {
+      display: block;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      width: 34px; height: 34px;
+      opacity: .35;
+      z-index: 4000;
+      transition: opacity 0.1s ease-in-out, width 0.1s, height 0.1s;
+      /* animation: 8s flicker infinite; */
+      animation-delay: 0.1s;
+    }
+
+    #kb-link svg {
+      transition: width 0.1s, height 0.1s;
+      border-radius: 34px;
+    }
+
+    #kb-link:hover {
+      opacity: 1;
+      width: 96px; height: 96px;
+      animation: none;
+      background-position: center center;
+      background: url('https://media.giphy.com/media/RlOAlt0Qmsw4CTIELN/giphy.gif') center -10px;
+      background-size: cover;
+      transition: opacity 0.1s ease-in-out, width 0.1s, height 0.1s;
+    }
+
+    #kb-link:hover:after{
+      content: 'enter the knowledge base --------->';
+      background: #ddd;
+      color: #000;
+      padding: 10px;
+      text-align: right;
+      width: 120px;
+      position: absolute;
+      right: 96px;
+      top: 0;
+      display: block;
+    }
+
+    #kb-link:hover svg {
+      border-radius: 0;
+      width: 96px; height: 96px;
+    }
+
   </style>
 </head>
 
@@ -317,7 +363,7 @@ A university club for hackers, problem solvers and IT security professionals.
 <ik>[+]== <y>WHAT WE DO</y> ============================================================[+]
 |                                                                              |
 |</ik> At DISC we offer workshops, talks, competitions and more!                    <ik>|
-|</ik> We host weekly meetups on the Burwood campus at 6pm in room B3.05            <ik>|
+|</ik> We host weekly meetups on the Burwood campus on <a href="{{site.url}}/calendar">Wednesday evenings</a>.          <ik>|
 |                                                                              |
 [+]==========================================================================[+]</ik>
 </center></pre>
@@ -378,6 +424,13 @@ DISC is run by students for students and is a non-profit making organisation.
 
 </div>
 </body>
+
+<a class="wrap" id="kb-link" href="{{site.url}}/kb">
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    width="34px" height="34px" viewBox="0 0 34 34" enable-background="new 0 0 34 34" xml:space="preserve">
+      <path fill="#fff" d="M0,0v34h34V0H0z M7.875,16.14h9.702l-2.625-2.625l1.406-1.406l5.016,5.016l-5.016,5.016l-1.406-1.406 l2.578-2.625H7.875V16.14z M25.874,24.108c0,0.532-0.203,1-0.609,1.406c-0.406,0.406-0.875,0.609-1.406,0.609H9.89 c-0.531,0-1-0.203-1.405-0.609c-0.406-0.406-0.609-0.875-0.609-1.406v-3.984H9.89v3.984h13.969V10.14H9.89v3.984H7.875V10.14 c0-0.531,0.203-1,0.609-1.406C8.89,8.328,9.358,8.124,9.89,8.124h13.969c0.531,0,1,0.204,1.406,0.609 c0.406,0.406,0.609,0.875,0.609,1.406V24.108z"/>
+  </svg>
+</a>
 
 <!-- Did you enjoy that? Maybe take a look at our knowledge base too: {{site.url}}/kb/ -->
 
