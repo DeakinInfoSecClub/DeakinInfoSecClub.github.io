@@ -46,7 +46,7 @@ sass:
     style: compressed
 
 include: ["_pages", "_shortlinks"]
-exclude: ["run.sh"]
+exclude: ["run.sh", "CONTRIBUTING.MD", "README.md", "Gemfile"]
 
 collections_dir: content
 collections:

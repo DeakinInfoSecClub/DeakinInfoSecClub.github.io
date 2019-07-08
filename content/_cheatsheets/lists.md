@@ -30,3 +30,4 @@ Contributions welcome!
 | [awesome-sec-talks](https://github.com/PaulSec/awesome-sec-talks) | A list of talks dating back to 2012 from various events and conferences from around the world, topics vary. |
 | [Risky Business](https://risky.biz/netcasts/risky-business/) | A podcast that discusses the news in infosec each week, based in Australia! |
 | [Infosec Industry Podcasts](https://infosecindustry.com/podcasts/) | An aggregation of various popular podcasts. |
+| [IppSec on Youtube](https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA/videos) | High-quality demonstrations of previous hackthebox machines. |
