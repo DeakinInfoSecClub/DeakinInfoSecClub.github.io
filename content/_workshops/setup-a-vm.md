@@ -1,7 +1,8 @@
 ---
 title: Getting started with VMs for hacking
 description: "Want to get involved in a CTF or practice hacking? You'll probably want a VM! Learn how to get started here!"
-author: ketz
+author:
+    - ketz
 date: 2019-06-11
 tags:
     - beginner

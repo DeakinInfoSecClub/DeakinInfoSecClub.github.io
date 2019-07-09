@@ -1,7 +1,8 @@
 ---
 title: "DISC_18_Tri2_Week10: Introduction to Binary Exploitation"
 date: 2018-09-19T18:00
-author: Viren Khatri
+author:
+    - Viren Khatri
 published: true
 tags:
     - binary

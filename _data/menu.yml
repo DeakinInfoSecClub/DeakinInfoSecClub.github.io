@@ -15,16 +15,12 @@
   type: main
   index_path: /kb/workshops
 
-# sub menu
-# - label: the team
-#   type: sub
-#   index_path: /about#the-team
-- label: calendar
-  type: sub
-  index_path: /calendar
 - label: contributing
   type: sub
   index_path: /kb/contributing
+- label: calendar
+  type: sub
+  index_path: /calendar
 
 - label: facebook
   type: social

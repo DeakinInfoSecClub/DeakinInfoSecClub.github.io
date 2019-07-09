@@ -30,6 +30,27 @@ collection: ""
         {%- endif-%}
         {%- endfor -%}
     {%- endif -%}
+{%- elsif page.sort_condition == "simple" -%}
+    {%- assign items = site[page.iterator] | compact | sort_natural: "title" -%}
+    {%- if items != nil -%}
+        {%- for item in items -%}
+        {%- assign thisChar = item.title | slice: 0 | upcase -%}
+        {%- if thisChar != currentChar -%}
+            {%- if currentChar -%}
+        </ul></blockquote>
+            {%- endif -%}
+        <h4 class="alpha">{{ thisChar }}</h4>
+            {%- assign currentChar = thisChar -%}
+        <blockquote class="simple">
+        <ul class="listing {{thisChar}}">
+        {%- endif -%}
+        <li class="narrow">{{firstChar}}  <a class="title" href="{{ item.url }}">{{ item.title }}</a></li>
+        {%- assign lastItem = items | last-%}
+        {%- if item == lastItem -%}
+            </ul></blockquote>
+        {%- endif-%}
+        {%- endfor -%}
+    {%- endif -%}
 {%- elsif page.sort_condition == "a_to_z" or page.sort_condition == nil -%}
     {%- assign items = site[page.iterator] | compact | sort_natural: "title" -%}
     {%- if items != nil -%}

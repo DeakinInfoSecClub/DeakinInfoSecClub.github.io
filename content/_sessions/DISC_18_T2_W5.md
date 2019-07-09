@@ -2,7 +2,8 @@
 title: "DISC_18_Tri2_Week5: Careers in CyberSecurity"
 date: 2018-08-08T18:00
 published: true
-author: Nigel Hedges
+author:
+    - Nigel Hedges
 tags:
     - careers
 ---
