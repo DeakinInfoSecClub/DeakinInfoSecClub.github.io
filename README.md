@@ -10,22 +10,40 @@
 
 ## How do I run this locally?
 
-### Install the dependencies:
-- `ruby` ([installation guide](https://www.ruby-lang.org/en/documentation/installation/))
-- `gem` ([download here](https://rubygems.org/pages/download))
-- `git` ([download here](https://git-scm.com/downloads))
-- `jekyll` ([installation guide](https://jekyllrb.com/docs/installation/))
+### Install Docker for your Operating System:
+* [Windows](https://runnable.com/docker/install-docker-on-windows-10)
+* [MacOS](https://runnable.com/docker/install-docker-on-macos)
+* [Linux](https://runnable.com/docker/install-docker-on-linux)
+* [Kali](https://medium.com/@airman604/installing-docker-in-kali-linux-2017-1-fbaa4d1447fe)
 
-### Follow the steps:
-1. Open a terminal window and navigate to where you want to store the website files.
-2. Clone this repo:
-    - `$ git clone https://github.com/DeakinInfoSecClub/DeakinInfoSecClub.github.io`.
-2. Enter the directory:
-    - `$ cd DeakinInfoSecClub.github.io`
-3. Run the development script:
-    - `$ ./run.sh`
+You may also want to install docker-compose for future Docker escapades!
+* [All OS's](https://docs.docker.com/compose/install/)
 
-**Or** run this one-liner: `git clone https://github.com/DeakinInfoSecClub/DeakinInfoSecClub.github.io && cd DeakinInfoSecClub.github.io && ./run.sh;`
+### Start a local Jekyll container
+(If using Windows, commands must be run in a Powershell terminal)
+* Clone a local copy of the repository 
+
+`git clone https://github.com/DeakinInfoSecClub/DeakinInfoSecClub.github.io`
+
+* Change directories into your newly created directory
+
+`cd DeakinInfoSecClub.github.io`
+
+* Start a Jekyll container, mounting the current directory in the container's Jekyll directory
+
+`docker run --rm --name localjekyll --volume="($PWD):/srv/jekyll" -p 4000:4000 -it jekyll/jekyll:4 jekyll serve --watch`
+
+* Once you see "Server running...", browse to `http://localhost:4000` in your web browser.
+
+### Test your changes
+* You can now make changes to your local working copy and see how it will look by reloading the page.
+
+**Known Issues:**
+* "There was an error while trying to write to `/srv/jekyll/Gemfile.lock`"
+    * This is caused by the local files belonging to `root`, so the container doesn't have write access once the directory is mounted.
+    * Run this command and try again: `touch Gemfile.lock && chmod a+w Gemfile.lock && chmod a+w .`
+* "Error response from daemon: C: drive is not shared. Please share it in Docker for Windows Settings.”
+    * Right click on the "Docker" system tray > Click Settings > Shared Drives > Tick the checkbox for your Drive and hit apply!
 
 ## What should I know about if I want to contribute?
 
