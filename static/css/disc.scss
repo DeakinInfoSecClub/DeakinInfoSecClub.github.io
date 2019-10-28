@@ -4,7 +4,7 @@
 
 $font-headings: "TopazPlus", "Menlo", "Lucida Console", monospace, Monaco;
 $font-body: "Fira Code", "Menlo", "Lucida Console", monospace, Monaco;
-$font-monospace: "Menlo", "Lucida Console", monospace, Monaco;
+$font-monospace: "Fira Code", "Menlo", "Lucida Console", monospace, Monaco;
 
 $query-smaller: "screen and (min-width: 768px)";
 
@@ -15,3 +15,4 @@ $color-pink: #f4b6e5;
 $color-blue: #54d7f9;
 
 @import "custom";
+@import "markdown";

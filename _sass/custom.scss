@@ -78,6 +78,10 @@ header {
             margin-top: 3rem;
         }
 
+        :first-child {
+            margin-top: 0;
+        }
+
         .listing {
             list-style-type: none;
             padding-left: 0;
@@ -158,7 +162,7 @@ header {
             font-family: $font-body;
         }
 
-        & *:first-child {
+        & > *:first-child {
             margin-top: 0;
 
             @media #{$query-smaller} {
@@ -176,7 +180,6 @@ header {
 
         h1, h2, h3, h4, h5, h6 {
             font-family: $font-headings;
-            margin-top: 2.5em;
         }
 
         p, li, ol, ul, blockquote {
@@ -185,6 +188,16 @@ header {
 
         ol {
             list-style-type: decimal-leading-zero;
+        }
+
+        li > p > img {
+            margin: 0.5em 0;
+            display: block;
+        }
+
+        img {
+            border-radius: 0.2em;
+            overflow: auto;
         }
 
         .emoji {
