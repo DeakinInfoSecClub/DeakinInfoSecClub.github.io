@@ -1,8 +1,13 @@
 <div class="item cell -4of12">
     <div class="card">
         <header class="card-header"><a href="{{ site.url }}{{ include.item.url }}"><h3 class="title">{{ include.item.title }}</h3></a></header>
+        {%- if include.item.description -%}
+            {%- assign short_desc = include.item.description -%}
+        {%- else -%}
+            {%- assign short_desc = include.item.content | strip_html | truncatewords: 32, '…' -%}
+        {%- endif -%}
         <div class="card-content">
-            <div class="inner excerpt">{{ include.item.content | strip_html | truncatewords: 32, '…' }}</div>
+            <div class="inner excerpt">{{ short_desc }}</div>
         </div>
     </div>
     <!-- <a href="{{ site.url }}{{ include.item.url }}"><h3 class="title">{{ include.item.title }}</h3></a>
