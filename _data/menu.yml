@@ -5,6 +5,9 @@
 - label: articles
   type: main
   index_path: /kb/articles
+- label: profiles
+  type: main
+  index_path: /kb/profiles
 - label: cheatsheets
   type: main
   index_path: /kb/cheatsheets
